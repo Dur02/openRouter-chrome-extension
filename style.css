@@ -1,0 +1,25 @@
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 95%;
+}
+
+#apiKeySection {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#apiKeyInput {
+  width: 95%;
+  padding: 5px;
+}
+
+#summarySection {
+  flex-grow: 1;
+}
+
+#summary {
+  white-space: pre-line;
+  word-wrap: break-word;
+}

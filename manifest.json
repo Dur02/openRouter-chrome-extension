@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Shopify Blog Summarizer",
+  "version": "1.0",
+  "description": "Summarize Shopify blog content using OpenRouter API",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "sidePanel",
+    "tabs",
+    "scripting",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "https://www.shopify.com/blog/*"
+  ],
+  "action": {
+    "default_title": "Click to open panel"
+  },
+  "side_panel": {
+    "default_path": "sidebar.html",
+    "openPanelOnActionClick": true
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.shopify.com/blog/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
